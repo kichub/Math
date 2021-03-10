@@ -1,0 +1,20 @@
+%http://tex.stackexchange.com/questions/85424/bibtex-cant-open-style-file
+\RequirePackage{filecontents}
+\begin{filecontents*}{\jobname.bib}  % writes bib file.
+@book{adams,
+  title     = {The Restaurant at the End of the Universe},
+  author    = {Douglas Adams},
+  series    = {The Hitchhiker's Guide to the Galaxy},
+  publisher = {Pan Macmillan},
+  year      = {1980},
+}
+\end{filecontents*}
+
+\documentclass[12pt]{scrartcl}
+\usepackage[comma,authoryear]{natbib}
+%\usepackage{natbib}
+\begin{document}
+Blablabla \cite{adams}
+\bibliographystyle{natdin} % natdin alphadin
+\bibliography{\jobname}    % use file \jobname.bib for bibliography
+\end{document}

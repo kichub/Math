@@ -1,39 +1,42 @@
-\documentclass[UTF8, 12pt]{ctexart}
+\chapter{连续和不连续}\label{chap:连续和不连续}
+%\documentclass[UTF8, 12pt]{ctexart}
 % UTF8编码，ctexart现实中文
-\usepackage{color}
-% 使用颜色
-\usepackage{geometry}
-\setcounter{tocdepth}{4}
-\setcounter{secnumdepth}{4}
-% 设置四级目录与标题
-\geometry{papersize={21cm,29.7cm}}
-% 默认大小为A4
-\geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}
-% 默认页边距为1英尺与1.25英尺
-\usepackage{indentfirst}
-\setlength{\parindent}{2.45em}
-% 首行缩进2个中文字符
-\usepackage{setspace}
-\renewcommand{\baselinestretch}{1.5}
-% 1.5倍行距
-\usepackage{amssymb}
-% 因为所以
-\usepackage{amsmath}
-% 数学公式
-\usepackage[colorlinks,linkcolor=black,urlcolor=blue]{hyperref}
-% 超链接
-\author{Didnelpsun}
-\title{连续与间断}
-\date{}
-\begin{document}
-\maketitle
-\pagestyle{empty}
-\thispagestyle{empty}
-\tableofcontents
-\thispagestyle{empty}
-\newpage
-\pagestyle{plain}
-\setcounter{page}{1}
+%\usepackage{color}
+%% 使用颜色
+%\usepackage{geometry}
+%\setcounter{tocdepth}{4}
+%\setcounter{secnumdepth}{4}
+%% 设置四级目录与标题
+%\geometry{papersize={21cm,29.7cm}}
+%% 默认大小为A4
+%\geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}
+%% 默认页边距为1英尺与1.25英尺
+%\usepackage{indentfirst}
+%\setlength{\parindent}{2.45em}
+%% 首行缩进2个中文字符
+%\usepackage{setspace}
+%\renewcommand{\baselinestretch}{1.5}
+%% 1.5倍行距
+%\usepackage{amssymb}
+%% 因为所以
+%\usepackage{amsmath}
+%% 数学公式
+%\usepackage[colorlinks,linkcolor=black,urlcolor=blue]{hyperref}
+%% 超链接
+%\author{Didnelpsun}
+%\title{连续与间断}
+%\date{}
+%\begin{document}
+%\maketitle
+%\pagestyle{empty}
+%\thispagestyle{empty}
+%\tableofcontents
+%\thispagestyle{empty}
+%\newpage
+%\pagestyle{plain}
+%\setcounter{page}{1}
+
+
 \section{连续}
 
 连续则极限值等于函数值。
@@ -59,9 +62,9 @@
 从而得到了$f(x)$关于$x$的表达式：\medskip
 
 $f(x)=\left\{\begin{array}{lcl}
-    x, & & x<0 \\
-    0, & & x=0 \\
-    x^2, & & x>0
+                 x,   & & x<0 \\
+                 0,   & & x=0 \\
+                 x^2, & & x>0
 \end{array}
 \right.$\medskip
 
@@ -74,12 +77,12 @@ $f(x)$在$R$上连续。
 一般会给出带有参数的分段函数，要计算参数就必须了解连续区间与函数之间的关系。
 
 \textbf{例题：}$f(x)=\left\{\begin{array}{lcl}
-    6, & & x\leqslant 0 \\
-    \dfrac{e^{ax^3}-1}{x-\arcsin x}, & & x>0
+                             6,                               & & x\leqslant 0 \\
+                             \dfrac{e^{ax^3}-1}{x-\arcsin x}, & & x>0
 \end{array}
 \right.$，$g(x)=\left\{\begin{array}{lcl}
-    \dfrac{3\sin(x-1)}{x-1}, & & x<1 \\
-    e^{bx}+1, & & x\geqslant 1
+                          \dfrac{3\sin(x-1)}{x-1}, & & x<1          \\
+                          e^{bx}+1,                & & x\geqslant 1
 \end{array}
 \right.$，\smallskip \\ 若$f(x)+g(x)$在$R$上连续，则求$a,b$。
 
@@ -111,6 +114,7 @@ $\therefore b=\ln 2$时$g(x)$在$R$上连续。\medskip
 
 $\therefore a=-1,b=\ln 2$时$f(x)+g(x)$在$R$上连续。而$a\neq -1$时$f(x)+g(x)$在$x=0$时不连续，$b\neq\ln 2$时$f(x)+g(x)$在$x=1$时不连续。
 
+
 \section{间断}
 
 \subsection{求间断点}
@@ -140,5 +144,3 @@ $\therefore x=e$为无穷间断点。\medskip
 而作为分子的$e^x-1$必然为一个常数，当式子趋向$1$或$e$的时候分母两个不等式中的一个不等式必然为一个常数，从而另一个不等式则变为了无穷小，所以$\lim\limits_{x\to 1}f(x)=\lim\limits_{x\to e}f(x)=\infty$。
 
 $\therefore a=1,b=e$。
-
-\end{document}

@@ -1,40 +1,45 @@
-\documentclass[UTF8, 12pt]{ctexart}
-% UTF8编码，ctexart现实中文
-\usepackage{color}
-% 使用颜色
-\usepackage{geometry}
-\setcounter{tocdepth}{4}
-\setcounter{secnumdepth}{4}
-% 设置四级目录与标题
-\geometry{papersize={21cm,29.7cm}}
-% 默认大小为A4
-\geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}
-% 默认页边距为1英尺与1.25英尺
-\usepackage{indentfirst}
-\setlength{\parindent}{2.45em}
-% 首行缩进2个中文字符
-\usepackage{setspace}
-\renewcommand{\baselinestretch}{1.5}
-% 1.5倍行距
-\usepackage{amssymb}
-% 因为所以
-\usepackage{amsmath}
-% 数学公式
-\usepackage[colorlinks,linkcolor=black,urlcolor=blue]{hyperref}
-% 超链接
-\author{Didnelpsun}
-\title{导数与微分}
-\date{}
-\begin{document}
-\maketitle
-\pagestyle{empty}
-\thispagestyle{empty}
-\tableofcontents
-\thispagestyle{empty}
-\newpage
-\pagestyle{plain}
-\setcounter{page}{1}
+\chapter{导数和微分}\label{chap:导数和微分}
+
+%\documentclass[UTF8, 12pt]{ctexart}
+%% UTF8编码，ctexart现实中文
+%\usepackage{color}
+%% 使用颜色
+%\usepackage{geometry}
+%\setcounter{tocdepth}{4}
+%\setcounter{secnumdepth}{4}
+%% 设置四级目录与标题
+%\geometry{papersize={21cm,29.7cm}}
+%% 默认大小为A4
+%\geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}
+%% 默认页边距为1英尺与1.25英尺
+%\usepackage{indentfirst}
+%\setlength{\parindent}{2.45em}
+%% 首行缩进2个中文字符
+%\usepackage{setspace}
+%\renewcommand{\baselinestretch}{1.5}
+%% 1.5倍行距
+%\usepackage{amssymb}
+%% 因为所以
+%\usepackage{amsmath}
+%% 数学公式
+%\usepackage[colorlinks,linkcolor=black,urlcolor=blue]{hyperref}
+%% 超链接
+%\author{Didnelpsun}
+%\title{导数与微分}
+%\date{}
+%\begin{document}
+%\maketitle
+%\pagestyle{empty}
+%\thispagestyle{empty}
+%\tableofcontents
+%\thispagestyle{empty}
+%\newpage
+%\pagestyle{plain}
+%\setcounter{page}{1}
+
+
 \section{一阶导数}
+
 \subsection{幂指函数求导}
 
 形如$f(x)^{g(x)}$的幂指函数求导也可以类似幂指函数的求极限方法。既可以取$e$为底的指数也可以取对数。
@@ -64,8 +69,8 @@ $e^{\sin x\cdot\ln x}(\sin x\cdot\ln x)'=x^{\sin x}\left(\cos\ln x+\dfrac{\sin x
 当给出一个分段函数，要求求出该函数的导数时，最重要的就是分段点是否可导，计算分段点的导数，如果两边的导数不相等，则需要挖去该点。\medskip
 
 \textbf{例题：}设$f(x)=\left\{\begin{array}{lcl}
-    \arctan x, & & x\leqslant 1 \\
-    \dfrac{1}{2}(e^{x^2-1}-x)+\dfrac{\pi}{4}, & & x>1
+                              \arctan x,                                & & x\leqslant 1 \\
+                              \dfrac{1}{2}(e^{x^2-1}-x)+\dfrac{\pi}{4}, & & x>1
 \end{array}
 \right.$，求$f'(x)$。
 
@@ -76,8 +81,8 @@ $e^{\sin x\cdot\ln x}(\sin x\cdot\ln x)'=x^{\sin x}\left(\cos\ln x+\dfrac{\sin x
 $\therefore f'_-(1)=f'_+(1)$，所以该点可导。\medskip
 
 $f(x)=\left\{\begin{array}{lcl}
-    \dfrac{1}{1+x^2}, & & x\leqslant 1 \\
-    xe^{x^2-1}-\dfrac{1}{2}, & & x>1
+                 \dfrac{1}{1+x^2},        & & x\leqslant 1 \\
+                 xe^{x^2-1}-\dfrac{1}{2}, & & x>1
 \end{array}
 \right.$。
 
@@ -92,8 +97,8 @@ $f(x)=\left\{\begin{array}{lcl}
 导数的存在性：若$\lim\limits_{x\to x_0}f'(x)$存在，则$f'(x_0)=\lim\limits_{x\to x_0}f'(x)$。\medskip
 
 \textbf{例题：}设$f(x)=\left\{\begin{array}{lcl}
-    \dfrac{\ln(1+bx)}{x}, & & x\neq 0 \\
-    -1, & & x=0
+                              \dfrac{\ln(1+bx)}{x}, & & x\neq 0 \\
+                              -1,                   & & x=0
 \end{array}
 \right.$，其中$b$为某常数，$f(x)$在定义域上处处可导，求$f'(x)$。
 
@@ -104,8 +109,8 @@ $f(x)=\left\{\begin{array}{lcl}
 $\lim\limits_{x\to 0}\dfrac{\ln(1+bx)}{x}=\lim\limits_{x\to 0}\dfrac{bx}{x}=b=-1$。从而可以完善函数与定义域。\medskip
 
 $\therefore f(x)=\left\{\begin{array}{lcl}
-    \dfrac{\ln(1-x)}{x}, & & x<1,x\neq 0 \\
-    -1, & & x=0
+                            \dfrac{\ln(1-x)}{x}, & & x<1,x\neq 0 \\
+                            -1,                  & & x=0
 \end{array}
 \right.$。
 
@@ -132,8 +137,8 @@ $=\dfrac{\ln(1-x)+x}{x^2}$
 泰勒公式：$=\dfrac{-x-\dfrac{1}{2}x^2+o(x^2)+x}{x^2}=-\dfrac{1}{2}$。\medskip
 
 $\therefore f'(x)=\left\{\begin{array}{lcl}
-    \dfrac{x-(x-1)\ln(1-x)}{x^2(x-1)}, & & x<1,x\neq 0 \\
-    -\dfrac{1}{2}, & & x=0
+                             \dfrac{x-(x-1)\ln(1-x)}{x^2(x-1)}, & & x<1,x\neq 0 \\
+                             -\dfrac{1}{2},                     & & x=0
 \end{array}
 \right.$。\medskip
 
@@ -150,10 +155,10 @@ $\therefore f'(0)=\lim\limits_{x\to 0}f'(x)$。计算过程类似。
 要求导数两侧的极限并让其相等。\medskip
 
 \textbf{例题：}设$f(x)=\left\{\begin{array}{lcl}
-    x^2, & & x\leqslant 0 \\
-    x^\alpha\sin\dfrac{1}{x}, & & x>0
+                              x^2,                      & & x\leqslant 0 \\
+                              x^\alpha\sin\dfrac{1}{x}, & & x>0
 \end{array}
-\right.$，若$f'(x)$连续，则$\alpha$应该满足？ 
+\right.$，若$f'(x)$连续，则$\alpha$应该满足？
 
 若导数连续，则两侧导数相等。
 
@@ -211,6 +216,7 @@ $=e^{2\lim\limits_{x\to 0}\frac{f(x)-f(0)}{x-0}}$
 
 $=e^{2f'(0)}=e^6$。
 
+
 \section{高阶导数}
 
 \subsection{导数存在性}
@@ -263,7 +269,9 @@ $y=x+e^x$的反函数的一阶导数为$\dfrac{\textrm{d}x}{\textrm{d}y}=\dfrac{
 
 所以二阶导数为$\dfrac{\textrm{d}^2x}{\textrm{d}y^2}=\dfrac{\textrm{d}\left(\dfrac{1}{1+e^{x}}\right)}{\textrm{d}y}=\dfrac{\dfrac{\textrm{d}\left(\dfrac{1}{1+e^{x}}\right)}{\textrm{d}x}}{\dfrac{\textrm{d}y}{\textrm{d}x}}=-\dfrac{e^x}{(1+e^x)^3}$。
 
+
 \section{微分}
+
 
 \section{隐函数与参数方程}
 
@@ -272,14 +280,15 @@ $y=x+e^x$的反函数的一阶导数为$\dfrac{\textrm{d}x}{\textrm{d}y}=\dfrac{
 $\dfrac{\textrm{d}y}{\textrm{d}x}=\dfrac{\dfrac{\textrm{d}y}{\textrm{d}t}}{\dfrac{\textrm{d}x}{\textrm{d}t}}$。
 
 \textbf{例题：}已知$y=y(x)$由参数方程$\left\{\begin{array}{lcl}
-    x=\dfrac{1}{2}\ln(1+t^2) \\
-    y=\arctan t
+                                       x=\dfrac{1}{2}\ln(1+t^2) \\
+                                       y=\arctan t
 \end{array}
 \right.$确定，求其一阶导数与二阶导数。
 
 $\dfrac{\textrm{d}y}{\textrm{d}x}=\dfrac{\dfrac{\textrm{d}y}{\textrm{d}t}}{\dfrac{\textrm{d}x}{\textrm{d}t}}=\dfrac{\dfrac{1}{2}\cdot\dfrac{2t}{1+t^2}}{\dfrac{1}{1+t^2}}=\dfrac{1}{t}$。
 
 $\dfrac{\textrm{d}^2y}{\textrm{d}x^2}=\dfrac{\textrm{d}\left(\dfrac{\textrm{d}y}{\textrm{d}x}\right)}{\textrm{d}x}=\dfrac{\dfrac{\textrm{d}\left(\dfrac{\textrm{d}y}{\textrm{d}x}\right)}{\textrm{d}t}}{\dfrac{\textrm{d}x}{\textrm{d}t}}=\dfrac{-\dfrac{1}{t^2}}{\dfrac{t}{1+t^2}}=-\dfrac{1+t^2}{t^3}$。
+
 
 \section{导数应用}
 
@@ -314,7 +323,3 @@ $\therefore k=\dfrac{\dfrac{\sqrt{2}}{2}}{\dfrac{3}{2}\cdot\sqrt{\dfrac{3}{2}}}=
 曲率为$\dfrac{2}{[1+(2x-4)^2]^{\frac{3}{2}}}$。
 
 当$2x-4=0$时即在$(2,7)$时曲率最大为2。
-
-
-
-\end{document}
